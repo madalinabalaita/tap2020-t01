@@ -1,7 +1,7 @@
 # Tema 1 pentru cursul Tehnici Avansate de Programare
 
 ## Context
-Sunteți angajat de o agenție imobiliară să implementați o aplicație care să calculeze prețul de vânzare al diverselor tipuri de impobile și comisionul agentului.
+Sunteți angajat de o agenție imobiliară să implementați o aplicație care să calculeze prețul de vânzare al diverselor tipuri de imobile și comisionul agentului.
 
 Imobilele sunt de trei tipuri:
 - Case
