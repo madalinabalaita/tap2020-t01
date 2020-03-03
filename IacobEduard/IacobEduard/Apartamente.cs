@@ -12,7 +12,7 @@ namespace IacobEduard
             if (camere == 2) { basicPret = 69000; }
             else { basicPret = m_P * 1175; }
             if (etaj >= 2 || etaj <= 8) { basicPret += 100; }
-            else if (etaj == 13) { basicPret -= 130; }//for the ppl with Triskaidekaphobia (13 number phobia)
+            else if (etaj == 13) { basicPret -= 130; }//for you guys with Triskaidekaphobia (fear of the number 13)
             else { basicPret -= 50; }
             return basicPret;
         }
