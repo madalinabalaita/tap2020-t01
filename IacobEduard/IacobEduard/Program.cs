@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Device.Location;
 
 namespace IacobEduard
 {
@@ -13,7 +14,11 @@ namespace IacobEduard
             Case casa;//= new Case(250, 4, 2);
             Garsoniere garsoniera;//= new Garsoniere(35, 1, 13);
             Apartamente apartament; //= new Apartamente(40, 3, 1);
-            
+
+            GeoCoordinate sCoord = null, eCoord = null;
+
+
+
             List<string[]> localizari = new List<string[]>();
 
             string[] locatie_apartament = { "Ciurchi", "47.1550049", "27.6140996" }, locatie_garsoniera = 
@@ -67,6 +72,9 @@ namespace IacobEduard
                         casa = new Case(m_P, camere, etaje);
                         Console.WriteLine("The price of the house is {0}, and the obtained comission is {1}.", casa.CalcPret(), casa.Calc_comision());
                         Console.WriteLine("The house is located on {0} street.", localizari[2][0]);
+                        sCoord = new GeoCoordinate(double.Parse(localizari[2][1]), double.Parse(localizari[2][2]));
+                        eCoord = new GeoCoordinate(double.Parse(locatie_centru[1]), double.Parse(locatie_centru[2]));
+                        Console.WriteLine("The distance from house to the city center is {0:0.00} km",casa.getDistance(sCoord, eCoord)/1000);
                     }
                     else if(raspuns == "flat")
                     {
@@ -82,6 +90,9 @@ namespace IacobEduard
                         apartament= new Apartamente(m_P, camere, etaj);
                         Console.WriteLine("The price of the flat is {0}, and the obtained comission is {1}.", apartament.CalcPret(), apartament.Calc_comision());
                         Console.WriteLine("The house is located on {0} street.", localizari[0][0]);
+                        sCoord = new GeoCoordinate(double.Parse(localizari[0][1]), double.Parse(localizari[0][2]));
+                        eCoord = new GeoCoordinate(double.Parse(locatie_centru[1]), double.Parse(locatie_centru[2]));
+                        Console.WriteLine("The distance from flat to the city center is {0:0.00} km", apartament.getDistance(sCoord, eCoord) / 1000);
                     }
                     else if(raspuns == "one room")
                     {
@@ -96,6 +107,9 @@ namespace IacobEduard
                         garsoniera = new Garsoniere(m_P, 1, etaj);
                         Console.WriteLine("The price of the flat is {0}, and the obtained comission is {1}.", garsoniera.CalcPret(), garsoniera.Calc_comision());
                         Console.WriteLine("The house is located on {0} street.", localizari[1][0]);
+                        sCoord = new GeoCoordinate(double.Parse(localizari[1][1]), double.Parse(localizari[1][2]));
+                        eCoord = new GeoCoordinate(double.Parse(locatie_centru[1]), double.Parse(locatie_centru[2]));
+                        Console.WriteLine("The distance from one room to the city center is {0:0.00} km", garsoniera.getDistance(sCoord, eCoord) / 1000);
                     }
                 }
                 else
@@ -104,9 +118,9 @@ namespace IacobEduard
                     break;
                 }
             }
-            Console.WriteLine("\nThx for using us. Have a nice day!");
             
-
+            Console.WriteLine("\nThx for using us. Have a nice day!");
+        
         }
     }
 }
