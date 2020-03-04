@@ -1,0 +1,11 @@
+C:\Users\Kathe\Desktop\PuriceCrina\PuriceCrina\bin\Debug\netcoreapp3.1\PuriceCrina.exe
+C:\Users\Kathe\Desktop\PuriceCrina\PuriceCrina\bin\Debug\netcoreapp3.1\PuriceCrina.deps.json
+C:\Users\Kathe\Desktop\PuriceCrina\PuriceCrina\bin\Debug\netcoreapp3.1\PuriceCrina.runtimeconfig.json
+C:\Users\Kathe\Desktop\PuriceCrina\PuriceCrina\bin\Debug\netcoreapp3.1\PuriceCrina.runtimeconfig.dev.json
+C:\Users\Kathe\Desktop\PuriceCrina\PuriceCrina\bin\Debug\netcoreapp3.1\PuriceCrina.dll
+C:\Users\Kathe\Desktop\PuriceCrina\PuriceCrina\bin\Debug\netcoreapp3.1\PuriceCrina.pdb
+C:\Users\Kathe\Desktop\PuriceCrina\PuriceCrina\obj\Debug\netcoreapp3.1\PuriceCrina.csprojAssemblyReference.cache
+C:\Users\Kathe\Desktop\PuriceCrina\PuriceCrina\obj\Debug\netcoreapp3.1\PuriceCrina.AssemblyInfoInputs.cache
+C:\Users\Kathe\Desktop\PuriceCrina\PuriceCrina\obj\Debug\netcoreapp3.1\PuriceCrina.AssemblyInfo.cs
+C:\Users\Kathe\Desktop\PuriceCrina\PuriceCrina\obj\Debug\netcoreapp3.1\PuriceCrina.dll
+C:\Users\Kathe\Desktop\PuriceCrina\PuriceCrina\obj\Debug\netcoreapp3.1\PuriceCrina.pdb
