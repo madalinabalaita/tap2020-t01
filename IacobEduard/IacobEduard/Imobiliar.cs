@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Device.Location;
 
 namespace IacobEduard
 {
-    public class Imobiliar
+    public abstract class Imobiliar
     {
         public int m_P;
         public int camere;
@@ -14,6 +15,17 @@ namespace IacobEduard
         private string[] locatie;
         public string[] GetLocatie() { return locatie; }
         public void SetLocatie(string[] value) { locatie = value; }
+
+        
+        public double getDistance(GeoCoordinate sCoord, GeoCoordinate eCoord) {
+            return sCoord.GetDistanceTo(eCoord);
+        }
+
+        public double Calc_comision()
+        {
+            double comision = basicPret * 0.05;
+            return comision;
+        }
 
         public Imobiliar() { }
         public Imobiliar(int m_P, int camere, int etaj)
