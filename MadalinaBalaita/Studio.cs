@@ -1,4 +1,4 @@
-﻿namespace Imobile
+namespace Imobile
 {
     class Studio : Estate
     {
@@ -6,14 +6,13 @@
         {
 
         }
-        public override decimal get_poundage()
-        {  
-            
+        public override decimal get_price_to_pay()
+        {
             //squares metres
             if (sm < 15) throw new SquareMetersException();
-             if (sm < 30) price -= 500m;
+            if (sm < 30) price -= 500m;
             else price += 500m;
-            
+
             //location of the studio
             if (location == "center") price += 3000m;
             else if (location == "suburbs") price -= 500m;
@@ -24,6 +23,12 @@
             if (condition == "old") price -= 1000m;
             else if (condition == "medium") price += 2000m;
             else if (condition == "new") price += 5000m;
+            return price;
+        }
+        public override decimal get_poundage()
+        {  
+            
+            
 
             //poundage depending on the price
             if (price < 15000m) return price * 0.035m;
