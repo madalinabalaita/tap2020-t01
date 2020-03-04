@@ -8,13 +8,33 @@ namespace RealStateAgency
         {
             Console.WriteLine("Enter Property Type: ");
             var propertyType = Console.ReadLine();
+
             Console.WriteLine("Enter Initial Selling Price: ");
-            var propertyPrice = Convert.ToDecimal(Console.ReadLine());
 
             Property property;
+            decimal propertyPrice;
 
-            property = new House(propertyPrice);
-            Console.WriteLine("The final price is " + property.PropertySellingPrice + " from which the applied commission is " + property.Commission);
+            switch (propertyType)
+            {
+                case "Apartment":
+                    propertyPrice = Convert.ToDecimal(Console.ReadLine());
+                    property = new Apartment(propertyPrice);
+                    Console.WriteLine("The final price is " + property.PropertySellingPrice + " from which the applied commission is " + property.Commission);
+                    break;
+                case "Single Room":
+                    propertyPrice = Convert.ToDecimal(Console.ReadLine());
+                    property = new SingleRoom(propertyPrice);
+                    Console.WriteLine("The final price is " + property.PropertySellingPrice + " from which the applied commission is " + property.Commission);
+                    break;
+                case "House":
+                    propertyPrice = Convert.ToDecimal(Console.ReadLine());
+                    property = new House(propertyPrice);
+                    Console.WriteLine("The final price is " + property.PropertySellingPrice + " from which the applied commission is " + property.Commission);
+                    break;
+                default:
+                    throw new InvalidOperationException("This type does not exist!");
+            }
+
         }
     }
 }
