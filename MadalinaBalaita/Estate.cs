@@ -1,15 +1,17 @@
-﻿namespace Imobile
+namespace Imobile
 {
     public abstract class Estate
     {   
         //a basic price, a starting point for the price which will increase or decrease based on the square meters,location and condition of the estate
+        //the price the client is willing to pay
         protected decimal price;
         public Estate(decimal price)
         {
             this.price = price;
         }
         public abstract decimal get_poundage();
-      
+        public abstract decimal get_price_to_pay();
+
         public decimal get_price()
         {
             return price + get_poundage();
