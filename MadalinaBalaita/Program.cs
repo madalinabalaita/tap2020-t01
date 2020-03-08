@@ -28,6 +28,7 @@ namespace Imobile
             Console.WriteLine("Welcome to our Real Estate Agency!");
             Console.WriteLine("What are you looking for?(House/Flat/Studio)");
             estate= Console.ReadLine();
+            Console.WriteLine("Remember that the price can change according to square meters/location/condition of the estate!!!");
             Console.WriteLine(" ");
 
             if (estate == "House")
