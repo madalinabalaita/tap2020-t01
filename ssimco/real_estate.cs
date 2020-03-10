@@ -1,9 +1,9 @@
-namespace real_estate
+namespace Real_estate
 {
-    public abstract class real_estate
+    public abstract class Real_estate
     {
         protected decimal price;
-        public real_estate(decimal price)
+        public Real_estate(decimal price)
         {
             this.price = price;
         }
@@ -13,7 +13,7 @@ namespace real_estate
             return price + get_commission();
         }
     }
-    public class House : real_estate
+    public class House : Real_estate
     {
         public House(decimal price) : base(price) { }
         public override decimal get_commission()
@@ -26,7 +26,7 @@ namespace real_estate
         }
 
     }
-    public class Flat : real_estate
+    public class Flat : Real_estate
     {
         public Flat(decimal price) : base(price) { }
         public override decimal get_commission()
@@ -35,7 +35,7 @@ namespace real_estate
         }
     }
 
-    public class Studio_Flat : real_estate
+    public class Studio_Flat : Real_estate
     {
         public Studio_Flat(decimal price) : base(price) { }
         public override decimal get_commission()
