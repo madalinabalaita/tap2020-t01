@@ -1,0 +1,32 @@
+{
+  "name": [
+    "Ionica",
+    "Mirciulica",
+    "Florica"
+  ],
+  "account": [
+    82000,
+    62000,
+    40000
+  ],
+  "Imobile": [
+    {
+      "type": "Casa",
+      "price": 4900,
+      "corection": 150,
+      "commission": 10
+    },
+    {
+      "type": "Apartament",
+      "price": 52000,
+      "corection": 200,
+      "commission": 12
+    },
+    {
+      "type": "Garsoniera",
+      "price": 32000,
+      "corection": -200,
+      "commission": 9
+    }
+  ]
+}
