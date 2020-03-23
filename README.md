@@ -8,7 +8,7 @@ Imobilele sunt de trei tipuri:
 - Apartamente
 - Garsoniere
 
-Pentru fiecare imobil agenția are un preț de vânzare iar comisionul se calculează în funcție de tipul imobilului.
+Pentru fiecare imobil agenția are un preț inițial (cerut de proprietarul imobilului) iar comisionul se calculează în funcție de tipul imobilului.
 
 ## Iterația 1 [`[sprint-1]`](https://github.com/RePierre/tap2020-t01/labels/sprint-1) ##
 
