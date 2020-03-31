@@ -123,12 +123,6 @@ namespace Imobile
                 var initialPrice = new LandInitPrice();
                 var calculator = new LandComissionCalculator();
 
-          else if (estate == "Land")
-            {
-                var finalPrice = new PriceCalculator();
-                var initialPrice = new InitialPrice();
-                var calculator = new ComissionCalculator();
-
                 Console.WriteLine("How many square meters?");
                 sqm = int.Parse(Console.ReadLine());
                 Console.WriteLine(" ");
@@ -144,7 +138,7 @@ namespace Imobile
                 Console.WriteLine("(Price withouth fee:" + initialPrice.Get_price_fromLandlord(land) + " , the poundage:" + calculator.Get_poundage(land, initialPrice.Get_price_fromLandlord(land)) + ")" + "The total price of this house is: " + calculator.Get_price(land, initialPrice.Get_price_fromLandlord(land)));
 
 
-     Console.WriteLine("(Price withouth fee:" + initialPrice.get_price_fromLandlord(land) + " , the poundage:" + calculator.get_poundage(land, initialPrice.get_price_fromLandlord(land)) + ")" + "The total price of this house is: " + finalPrice.get_price(land));
+    
               
 
 
