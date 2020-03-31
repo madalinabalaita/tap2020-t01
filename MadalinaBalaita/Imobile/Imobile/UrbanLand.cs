@@ -6,7 +6,7 @@
         {
 
         }
-        public override decimal get_price_from_landlord()
+       /* public override decimal get_price_from_landlord()
         {
             if (usage == "intravilan") {
                 if (sm < 500) price = 8000;
@@ -48,6 +48,6 @@
             return price * poundage;
         }
 
-
+    */
     }
 }
