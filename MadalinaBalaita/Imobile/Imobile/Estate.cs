@@ -22,8 +22,8 @@
         public Estate()
         {
         }
-
-        public Estate( int sm,   string location,string condition)
+        //constructor for buildings: Flats,studios,houses
+        public Estate( int sm,string location,string condition)
         {
             
             this.sm = sm;
@@ -31,6 +31,7 @@
             this.condition = condition;
 
         }
+        //constructor for land
         public Estate(int sm, int cadastral_nr, string usage)
         {
 
