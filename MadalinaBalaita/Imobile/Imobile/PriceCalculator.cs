@@ -1,14 +1,14 @@
 ﻿namespace Imobile
 {
-    class PriceCalculator
+    abstract class PriceCalculator
     {
-        public decimal get_price(Estate estate)
+        /*public decimal Get_price(Estate estate)
         {
             var comission = new ComissionCalculator();
             var initialPrice = new InitialPrice();
 
-            return initialPrice.get_price_fromLandlord(estate) + comission.get_poundage(estate, initialPrice.get_price_fromLandlord(estate));
+            return initialPrice.Get_price_fromLandlord(estate) + comission.Get_poundage(estate, initialPrice.Get_price_fromLandlord(estate));
 
-        }
+        }*/
     }
 }
