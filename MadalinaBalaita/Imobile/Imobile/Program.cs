@@ -117,9 +117,11 @@ namespace Imobile
                   }
 
             }
-          /*  else if (estate == "Land")
+          else if (estate == "Land")
             {
-
+                var finalPrice = new PriceCalculator();
+                var initialPrice = new InitialPrice();
+                var calculator = new ComissionCalculator();
                 Console.WriteLine("How many square meters?");
                 sqm = int.Parse(Console.ReadLine());
                 Console.WriteLine(" ");
@@ -131,10 +133,10 @@ namespace Imobile
                 Console.WriteLine(" ");
                 
                     UrbanLand land = new UrbanLand(sqm, cad_nr, cond);
-                    Console.WriteLine("(Price withouth fee:" + land.get_price_from_landlord() + " , the poundage:" + land.get_poundage() + ")" + "The total price of this land is: " + land.get_price());
+                Console.WriteLine("(Price withouth fee:" + initialPrice.get_price_fromLandlord(land) + " , the poundage:" + calculator.get_poundage(land, initialPrice.get_price_fromLandlord(land)) + ")" + "The total price of this house is: " + finalPrice.get_price(land));
               
 
-            }*/
+            }
 
 
 

@@ -33,6 +33,21 @@ namespace Imobile
                 else if (sm > 30) return 22000;
                 
             }
+            if(estate is UrbanLand)
+            {
+                if (estate.usage == "intravilan")
+                {
+                    if (estate.sm < 500) return 8000;
+                    else if (estate.sm >= 500 && estate.sm <= 1500) return 14000;
+                    else if (estate.sm > 1500) return 20000;
+                }
+                else if (estate.usage == "extravilan")
+                {
+                    if (estate.sm < 500) return 5000;
+                    else if (estate.sm >= 500 && estate.sm <= 1500) return 10000;
+                    else if (estate.sm > 1500) return 15000;
+                }
+            }
             throw new InvalidOperationException("Unknown estate type!");
         }
     }
