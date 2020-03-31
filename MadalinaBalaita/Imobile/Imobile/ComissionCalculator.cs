@@ -2,22 +2,22 @@
 
 namespace Imobile
 {
-    abstract class ComissionCalculator
+    class ComissionCalculator
     {
-       
-        protected abstract decimal CalculateComission(Estate estate);
-        public decimal Get_poundage(Estate estate,decimal price)
+        public int sm;//square meters of the estate
+        public string location;//the location of the estate:center,somewhere ok,suburbs
+        public string condition;//condition of the estate:really old,old,medium,new
+        public string usage;//land for buildings(intravilan) or agriculture(extravilan)
+        public int cadastral_nr;//cadastral number
+
+        public decimal get_poundage(Estate estate,decimal price)
         {
-            var comission = CalculateComission(estate);
+            var comission = GetComission(estate);
             return price * comission;
         }
 
-        public decimal Get_price(Estate estate, decimal price)
+        private decimal GetComission(Estate estate)
         {
-
-            var comission = Get_poundage(estate,price);
-            return price += comission;
-
             if(estate is House)
             {
                 decimal poundage1 = 0m;
@@ -131,7 +131,7 @@ namespace Imobile
                 return  poundage;
             }
            throw new InvalidOperationException("Unknown estate type!"); 
-
         }
+        
     }
 }

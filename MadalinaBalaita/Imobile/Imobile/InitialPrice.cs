@@ -2,19 +2,14 @@
 
 namespace Imobile
 {
-    abstract class InitialPrice
-    { 
-        
-        protected abstract decimal GetInitPrice(Estate estate);
-        public decimal Get_price_fromLandlord(Estate estate)
+    class InitialPrice
+    {
+        public int sm;
+        public decimal get_price_fromLandlord(Estate estate)
         {
             var price = GetInitPrice(estate);
             return price;
         }
-
-     
-      
-
         private decimal GetInitPrice(Estate estate)
         {
             if (estate is House)
@@ -55,6 +50,5 @@ namespace Imobile
             }
             throw new InvalidOperationException("Unknown estate type!");
         }
-
     }
 }

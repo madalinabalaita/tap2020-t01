@@ -31,9 +31,9 @@ namespace Imobile
 
             if (estate == "House")
             {
-               
-                var initialPrice = new HouseInitPrice();
-                var calculator = new HouseComissionCalculator();
+                var finalPrice = new PriceCalculator();
+                var initialPrice = new InitialPrice();
+                var calculator = new ComissionCalculator();
                 Console.WriteLine("How many square meters?");
                 sqm = int.Parse(Console.ReadLine());
                 Console.WriteLine(" ");
@@ -46,7 +46,7 @@ namespace Imobile
                 try
                 {
                     House house = new House(sqm, loc, cond);
-                    Console.WriteLine("(Price withouth fee:" + initialPrice.Get_price_fromLandlord(house) + " , the poundage:" + calculator.Get_poundage(house, initialPrice.Get_price_fromLandlord(house)) + ")" + "The total price of this house is: " + calculator.Get_price(house, initialPrice.Get_price_fromLandlord(house)));
+                    Console.WriteLine("(Price withouth fee:" + initialPrice.get_price_fromLandlord(house) + " , the poundage:" + calculator.get_poundage(house, initialPrice.get_price_fromLandlord(house)) + ")" + "The total price of this house is: " + finalPrice.get_price(house));
 
                 }
                 catch (SquareMetersException e)
@@ -60,9 +60,9 @@ namespace Imobile
             }
               else if (estate == "Flat")
               {
-                
-                var initialPrice = new FlatInitPrice();
-                var calculator = new FlatComissionCalculator();
+                var finalPrice = new PriceCalculator();
+                var initialPrice = new InitialPrice();
+                var calculator = new ComissionCalculator();
                 Console.WriteLine("How many square meters?");
                   sqm = int.Parse(Console.ReadLine());
                   Console.WriteLine(" ");
@@ -75,7 +75,7 @@ namespace Imobile
                   try
                   {
                       Flat flat = new Flat( sqm, loc, cond);
-                    Console.WriteLine("(Price withouth fee:" + initialPrice.Get_price_fromLandlord(flat) + " , the poundage:" + calculator.Get_poundage(flat, initialPrice.Get_price_fromLandlord(flat)) + ")" + "The total price of this house is: " + calculator.Get_price(flat, initialPrice.Get_price_fromLandlord(flat)));
+                    Console.WriteLine("(Price withouth fee:" + initialPrice.get_price_fromLandlord(flat) + " , the poundage:" + calculator.get_poundage(flat, initialPrice.get_price_fromLandlord(flat)) + ")" + "The total price of this house is: " + finalPrice.get_price(flat));
                 }
                   catch (SquareMetersException e)
                   {
@@ -89,9 +89,9 @@ namespace Imobile
               }
               else if (estate == "Studio")
               {
-                
-                var initialPrice = new StudioInitPrice();
-                var calculator = new StudioComissionCalculator();
+                var finalPrice = new PriceCalculator();
+                var initialPrice = new InitialPrice();
+                var calculator = new ComissionCalculator();
                 Console.WriteLine("How many square meters?");
                   sqm = int.Parse(Console.ReadLine());
                   Console.WriteLine(" ");
@@ -105,7 +105,7 @@ namespace Imobile
                   {
 
                       Studio studio = new Studio( sqm, loc, cond);
-                    Console.WriteLine("(Price withouth fee:" + initialPrice.Get_price_fromLandlord(studio) + " , the poundage:" + calculator.Get_poundage(studio, initialPrice.Get_price_fromLandlord(studio)) + ")" + "The total price of this house is: " + calculator.Get_price(studio, initialPrice.Get_price_fromLandlord(studio)));
+                    Console.WriteLine("(Price withouth fee:" + initialPrice.get_price_fromLandlord(studio) + " , the poundage:" + calculator.get_poundage(studio, initialPrice.get_price_fromLandlord(studio)) + ")" + "The total price of this house is: " + finalPrice.get_price(studio));
                 }
                   catch (SquareMetersException e)
                   {
@@ -117,18 +117,11 @@ namespace Imobile
                   }
 
             }
-
-           else if (estate == "Land")
-            {
-                var initialPrice = new LandInitPrice();
-                var calculator = new LandComissionCalculator();
-
           else if (estate == "Land")
             {
                 var finalPrice = new PriceCalculator();
                 var initialPrice = new InitialPrice();
                 var calculator = new ComissionCalculator();
-
                 Console.WriteLine("How many square meters?");
                 sqm = int.Parse(Console.ReadLine());
                 Console.WriteLine(" ");
@@ -140,13 +133,8 @@ namespace Imobile
                 Console.WriteLine(" ");
                 
                     UrbanLand land = new UrbanLand(sqm, cad_nr, cond);
-
-                Console.WriteLine("(Price withouth fee:" + initialPrice.Get_price_fromLandlord(land) + " , the poundage:" + calculator.Get_poundage(land, initialPrice.Get_price_fromLandlord(land)) + ")" + "The total price of this house is: " + calculator.Get_price(land, initialPrice.Get_price_fromLandlord(land)));
-
-
-     Console.WriteLine("(Price withouth fee:" + initialPrice.get_price_fromLandlord(land) + " , the poundage:" + calculator.get_poundage(land, initialPrice.get_price_fromLandlord(land)) + ")" + "The total price of this house is: " + finalPrice.get_price(land));
+                Console.WriteLine("(Price withouth fee:" + initialPrice.get_price_fromLandlord(land) + " , the poundage:" + calculator.get_poundage(land, initialPrice.get_price_fromLandlord(land)) + ")" + "The total price of this house is: " + finalPrice.get_price(land));
               
-
 
             }
 
