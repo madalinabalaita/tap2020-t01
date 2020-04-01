@@ -104,7 +104,7 @@ namespace Imobile
                     Console.WriteLine("How many square meters?");
                     sqm = double.Parse(Console.ReadLine());
                     Console.WriteLine(" ");
-                    Console.WriteLine("Choose a location (543345/23214/61321)");
+                    Console.WriteLine("Choose a cadastral number (543345/23214/61321)");
                     cad_nr = int.Parse(Console.ReadLine());
                     Console.WriteLine(" ");
                     Console.WriteLine("Choose the usage(intravilan/extravilan)");
@@ -114,18 +114,19 @@ namespace Imobile
                     UrbanLand land = new UrbanLand(sqm, cad_nr, cond);
                     RealEstatePrices.GetInitialPriceFrom(land, initialPrice);
                     RealEstatePrices.GetComissionFrom(land, calculator, initialPrice);
-                    RealEstatePrices.GetPriceFrom(land, calculator, new AssetsCalculator());
-
+                    RealEstatePrices.GetPriceFrom(land, calculator,initialPrice);
+                    RealEstatePrices.GetLocationLandFrom(cad_nr, land);
                     // Console.WriteLine("(Price withouth fee:" + land.Get_price_fromLandlord(initialPrice.Get_price_fromLandlord(land)) + " , the poundage:" + land.Get_poundage(calculator.Get_poundage(land, initialPrice.Get_price_fromLandlord(land))) + ")" + "The total price of this house is: " + land.Get_price(calculator.Get_price(land, initialPrice.Get_price_fromLandlord(land))));
 
                 }
-                Console.WriteLine(" ");
-                Console.WriteLine("Thank you for choosing us! We hope you found what you were looking for!");
+                
                 Console.WriteLine(" ");
                 Console.WriteLine("Are you searching for something else?(yes/no)");
                 answer = Console.ReadLine();
                 if (answer != "yes") k = 1;
             }
+            Console.WriteLine(" ");
+            Console.WriteLine("Thank you for choosing us! We hope you found what you were looking for! Have a good day!");
         }
         static void TestGoodPrice(Estate estate)
         {

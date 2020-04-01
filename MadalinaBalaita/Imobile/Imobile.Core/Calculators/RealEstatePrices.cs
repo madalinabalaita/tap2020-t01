@@ -40,20 +40,40 @@ namespace Imobile.Core.Calculators
         {
             if (location=="center")
             {
-                Console.WriteLine("We have the next New York's streets for the available " + estate.GetType().Name + "s: " + "Wall Street, Houston Street, Maiden Lane.");
+                Console.WriteLine("We have the next New York's streets address for the available " + estate.GetType().Name + "s: " + "Wall Street, Houston Street, Maiden Lane.");
 
             }
             else if(location=="somewhere ok")
             {
-                Console.WriteLine("We have the next New York's streets adress for the available " + estate.GetType().Name + "s: " + "Fulton Street ,Lafayette Street , Lenox Avenue.");
+                Console.WriteLine("We have the next New York's streets address for the available " + estate.GetType().Name + "s: " + "Fulton Street ,Lafayette Street, Lenox Avenue.");
             }
             else if (location == "suburbs")
             {
-                Console.WriteLine("We have the next New York's streets for the available " + estate.GetType().Name + "s: " + "Upper Montclair, Kensington,Great Neck Gardens.");
+                Console.WriteLine("We have the next New York's streets address for the available " + estate.GetType().Name + "s: " + "Upper Montclair, Kensington, Great Neck Gardens.");
             }
 
 
         }
-  
+        public static void GetLocationLandFrom(int cadastral_nr, Estate estate)
+        {
+          
+            if (cadastral_nr == 543345)
+            {
+                Console.WriteLine("The land with the cadastral number "+cadastral_nr+ " is situated in NYC - Bronx" );
+
+            }
+            else if (cadastral_nr == 23214)
+            {
+                Console.WriteLine("The land with the cadastral number " + cadastral_nr + " is situated in Chautauqua");
+
+            }
+            else if (cadastral_nr == 61321)
+            {
+                Console.WriteLine("The land with the cadastral number " + cadastral_nr + " is situated in Ontario");
+
+            }
+
+
+        }
     }
 }
