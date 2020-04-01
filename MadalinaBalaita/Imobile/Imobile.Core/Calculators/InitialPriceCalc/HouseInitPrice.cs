@@ -1,6 +1,7 @@
 ﻿using Imobile.Core.Estates;
+using Imobile.Core.Calculators.Comissioncalc;
 
-namespace Imobile.Core.Calculators
+namespace Imobile.Core.Calculators.InitialPriceCalc
 {
     public class HouseInitPrice : InitialPrice
     {

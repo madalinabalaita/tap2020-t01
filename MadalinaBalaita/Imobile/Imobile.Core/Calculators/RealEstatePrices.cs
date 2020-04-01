@@ -1,5 +1,7 @@
 ﻿using System;
 using Imobile.Core.Estates;
+using Imobile.Core.Calculators.InitialPriceCalc;
+using Imobile.Core.Calculators.Comissioncalc;
 
 namespace Imobile.Core.Calculators
 {

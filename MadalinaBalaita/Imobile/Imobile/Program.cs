@@ -2,6 +2,8 @@
 using Imobile.Core;
 using Imobile.Core.Calculators;
 using Imobile.Core.Estates;
+using Imobile.Core.Calculators.InitialPriceCalc;
+using Imobile.Core.Calculators.Comissioncalc;
 
 namespace Imobile
 {
