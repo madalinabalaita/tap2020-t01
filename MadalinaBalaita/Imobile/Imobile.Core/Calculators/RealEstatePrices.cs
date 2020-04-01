@@ -36,6 +36,24 @@ namespace Imobile.Core.Calculators
             System.Console.Out.WriteLine("The total price is " + estate.Get_price(price)+"€");
 
         }
+        public static void GetLocationFrom(String location,Estate estate)
+        {
+            if (location=="center")
+            {
+                Console.WriteLine("We have the next New York's streets for the available " + estate.GetType().Name + "s: " + "Wall Street, Houston Street, Maiden Lane.");
 
+            }
+            else if(location=="somewhere ok")
+            {
+                Console.WriteLine("We have the next New York's streets adress for the available " + estate.GetType().Name + "s: " + "Fulton Street ,Lafayette Street , Lenox Avenue.");
+            }
+            else if (location == "suburbs")
+            {
+                Console.WriteLine("We have the next New York's streets for the available " + estate.GetType().Name + "s: " + "Upper Montclair, Kensington,Great Neck Gardens.");
+            }
+
+
+        }
+  
     }
 }
