@@ -14,7 +14,7 @@ namespace Imobile
                 // Console.WriteLine("{0}: {1}",estate.GetType().Name,estate.IPrice);
             }
 
-           public static void GetComissionFrom(Estate estate, ComissionCalculator comission, IInitialPrice initPrice)
+           public static void GetComissionFrom(Estate estate, IComissionCalculator comission, IInitialPrice initPrice)
             {
                 var iPrice = initPrice.Get_price_fromLandlord(estate);
                 var com = comission.Get_poundage(estate, estate.Get_price_fromLandlord(iPrice));
@@ -22,7 +22,7 @@ namespace Imobile
 
             }
 
-           public static void GetPriceFrom(Estate estate, ComissionCalculator calculator, IInitialPrice initPrice)
+           public static void GetPriceFrom(Estate estate, IComissionCalculator calculator, IInitialPrice initPrice)
             {
 
                 var iPrice = initPrice.Get_price_fromLandlord(estate);
