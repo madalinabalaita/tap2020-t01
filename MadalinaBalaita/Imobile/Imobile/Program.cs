@@ -51,6 +51,7 @@ namespace Imobile
                     RealEstatePrices.GetInitialPriceFrom(house, initialPrice);
                     RealEstatePrices.GetComissionFrom(house, calculator, initialPrice);
                     RealEstatePrices.GetPriceFrom(house, calculator, initialPrice);
+                    TestGoodPrice(house);
                 }
                 catch (SquareMetersException e)
                 {
@@ -152,11 +153,32 @@ namespace Imobile
 
             Console.WriteLine("Thank you for choosing us! We hope you found what you were looking for!");
         }
+        static void TestGoodPrice(Estate estate)
+        {
+            estate.Get_price_fromLandlord(new AssetsCalculator().Get_price_fromLandlord(estate));
+            estate.Get_poundage(new AssetsCom().Get_poundage(estate, estate.Get_price_fromLandlord(new AssetsCalculator().Get_price_fromLandlord(estate))));
+            estate.Get_price(new AssetsCom().Get_price(estate, estate.Get_poundage(new AssetsCom().Get_poundage(estate, estate.Get_price_fromLandlord(new AssetsCalculator().Get_price_fromLandlord(estate))))));
+            if(estate.IPrice+estate.Comission==estate.Price){ Console.WriteLine("The calculus looks good! Everything is going as planned! Keep up the good work!"); }
+            Console.WriteLine("{0}: {1}: {2}", estate.IPrice, estate.Comission, estate.Price);
+        }
         class AssetsCalculator : IInitialPrice
         {
             public decimal Get_price_fromLandlord(Estate estate)
             {
-                return 8000;
+                return 130000;
+            }
+        }
+        class AssetsCom : IComissionCalculator
+        {
+            public decimal Get_poundage(Estate estate,decimal price)
+            {
+                return price*0.032m;
+            }
+            public decimal Get_price(Estate estate,decimal price)
+            {
+                price = new AssetsCalculator().Get_price_fromLandlord(estate);
+                return price += estate.Comission;
+                
             }
         }
 
