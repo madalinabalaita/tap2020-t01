@@ -149,24 +149,18 @@ namespace Imobile
 
                 // Console.WriteLine("(Price withouth fee:" + land.Get_price_fromLandlord(initialPrice.Get_price_fromLandlord(land)) + " , the poundage:" + land.Get_poundage(calculator.Get_poundage(land, initialPrice.Get_price_fromLandlord(land))) + ")" + "The total price of this house is: " + land.Get_price(calculator.Get_price(land, initialPrice.Get_price_fromLandlord(land))));
 
-
-
-
-
-
             }
-
-
 
             Console.WriteLine("Thank you for choosing us! We hope you found what you were looking for!");
         }
-       // land.Get_price_fromLandlord(initialPrice.Get_price_fromLandlord(land))
+       
        static void GetInitialPriceFrom(Estate estate,InitialPrice initPrice) 
         {
             var iPrice = initPrice.Get_price_fromLandlord(estate);
             Console.WriteLine("The initial price is " + estate.Get_price_fromLandlord(iPrice));
+           // Console.WriteLine("{0}: {1}",estate.GetType().Name,estate.IPrice);
         }
-        //land.Get_poundage(calculator.Get_poundage(land, initialPrice.Get_price_fromLandlord(land)))
+        
         static void GetComissionFrom(Estate estate,ComissionCalculator comission,InitialPrice initPrice)
         {
             var iPrice = initPrice.Get_price_fromLandlord(estate);
@@ -174,7 +168,7 @@ namespace Imobile
             Console.WriteLine("The poundage is: " + estate.Get_poundage(com));
 
         }
-        //land.Get_price(calculator.Get_price(land, initialPrice.Get_price_fromLandlord(land))));
+        
         static void GetPriceFrom(Estate estate,ComissionCalculator calculator,InitialPrice initPrice)
         {
 
