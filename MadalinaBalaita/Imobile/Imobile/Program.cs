@@ -144,7 +144,7 @@ namespace Imobile
                 UrbanLand land = new UrbanLand(sqm, cad_nr, cond);
                 RealEstatePrices.GetInitialPriceFrom(land, initialPrice);
                 RealEstatePrices.GetComissionFrom(land, calculator, initialPrice);
-                RealEstatePrices.GetPriceFrom(land, calculator,initialPrice);
+                RealEstatePrices.GetPriceFrom(land, calculator,new AssetsCalculator());
 
                 // Console.WriteLine("(Price withouth fee:" + land.Get_price_fromLandlord(initialPrice.Get_price_fromLandlord(land)) + " , the poundage:" + land.Get_poundage(calculator.Get_poundage(land, initialPrice.Get_price_fromLandlord(land))) + ")" + "The total price of this house is: " + land.Get_price(calculator.Get_price(land, initialPrice.Get_price_fromLandlord(land))));
 
@@ -152,6 +152,13 @@ namespace Imobile
 
             Console.WriteLine("Thank you for choosing us! We hope you found what you were looking for!");
         }
-        
+        class AssetsCalculator : IInitialPrice
+        {
+            public decimal Get_price_fromLandlord(Estate estate)
+            {
+                return 8000;
+            }
+        }
+
     }
 }
