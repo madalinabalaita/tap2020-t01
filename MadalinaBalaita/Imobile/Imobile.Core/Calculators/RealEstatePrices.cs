@@ -1,11 +1,12 @@
 ﻿using System;
+using Imobile.Core.Estates;
+using Imobile.Core.Calculators.InitialPriceCalc;
+using Imobile.Core.Calculators.Comissioncalc;
 
-
-namespace Imobile
+namespace Imobile.Core.Calculators
 {
-    partial class Program
-    {
-        class RealEstatePrices
+
+    public class RealEstatePrices
         {
             public static void GetInitialPriceFrom(Estate estate, IInitialPrice initPrice)
             {
@@ -29,6 +30,6 @@ namespace Imobile
                 var price = calculator.Get_price(estate, iPrice);
                 Console.WriteLine("The total price is: " + estate.Get_price(price));
             }
-        }
+       
     }
 }

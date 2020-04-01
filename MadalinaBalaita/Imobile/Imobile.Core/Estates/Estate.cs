@@ -1,16 +1,17 @@
-﻿namespace Imobile
+﻿ using Imobile.Core.Calculators;
+namespace Imobile.Core.Estates
 {
-    abstract class Estate :EstateBase
+    public abstract class Estate :EstateBase
     {
    
-        public int sm { get; set; }//square meters of the estate
+        public double  sm;//square meters of the estate
         public string location;//the location of the estate:center,somewhere ok,suburbs
         public string condition;//condition of the estate:really old,old,medium,new
         public string usage;//land for buildings(intravilan) or agriculture(extravilan)
         public int cadastral_nr;//cadastral number
       
 
-       /* public string Get_location(string location)
+        public string Get_location(string location)
         {
             return location;
         }
@@ -18,9 +19,9 @@
         {
             return cadastral_nr;
         }
-        */
+       
         //constructor for buildings: Flats,studios,houses
-        public Estate( int sm,string location,string condition)
+        public Estate( double sm,string location,string condition)
         {
             
             this.sm = sm;
@@ -30,7 +31,7 @@
         }
         
         //constructor for land
-        public Estate(int sm, int cadastral_nr, string usage)
+        public Estate(double sm, int cadastral_nr, string usage)
         {
 
             this.sm = sm;

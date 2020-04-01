@@ -1,21 +1,20 @@
-﻿namespace Imobile
+﻿using Imobile.Core.Estates;
+using Imobile.Core.Calculators.InitialPriceCalc;
+namespace Imobile.Core.Calculators.Comissioncalc
 {
-    class HouseComissionCalculator : ComissionCalculator
+    public class HouseComissionCalculator : ComissionCalculator
     {
-        public int sm;//square meters of the estate
-        public string location;//the location of the estate:center,somewhere ok,suburbs
-        public string condition;//condition of the estate:really old,old,medium,new
-       
+        public double sm;
        
         protected override decimal CalculateComission(Estate estate)
         {
             decimal poundage1 = 0m;
             decimal poundage2 = 0m;
-            decimal poundage3;
+            decimal poundage3=0m;
             decimal poundage;
 
-            if (estate.sm < 15) throw new SquareMetersException();
-            else if (estate.sm < 70) poundage1 = 0.005m;
+            
+             if (estate.sm < 70) poundage1 = 0.005m;
             else if (estate.sm >= 70 && estate.sm <= 80) poundage1 = 0.007m;
             else if (estate.sm > 80) poundage1 = 0.01m;
 
@@ -29,7 +28,7 @@
             if (estate.condition == "old") poundage3 = 0.001m;
             else if (estate.condition == "medium") poundage3 = 0.005m;
             else if (estate.condition == "new") poundage3 = 0.01m;
-            else throw new UninhabitableException();
+            
 
 
             poundage = poundage1 + poundage2 + poundage3;

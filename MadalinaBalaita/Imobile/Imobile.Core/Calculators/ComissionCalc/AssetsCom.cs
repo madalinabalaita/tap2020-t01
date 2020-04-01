@@ -1,9 +1,10 @@
-﻿namespace Imobile
+﻿using Imobile.Core.Estates;
+using Imobile.Core.Calculators.InitialPriceCalc;
+namespace Imobile.Core.Calculators.Comissioncalc
 {
 
-    partial class Program
-    {
-        class AssetsCom : IComissionCalculator
+
+    public class AssetsCom : IComissionCalculator
         {
             public decimal Get_poundage(Estate estate,decimal price)
             {
@@ -15,7 +16,7 @@
                 return price += estate.Comission;
                 
             }
-        }
+     
 
     }
 }

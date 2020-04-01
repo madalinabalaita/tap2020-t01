@@ -1,12 +1,10 @@
-﻿namespace Imobile
+﻿using Imobile.Core.Estates;
+using Imobile.Core.Calculators.InitialPriceCalc;
+namespace Imobile.Core.Calculators.Comissioncalc
 {
-    class LandComissionCalculator : ComissionCalculator
+    public class LandComissionCalculator : ComissionCalculator
     {
-        public int sm;//square meters of the estate
-        public int cadastral_nr;//the location of the estate:center,somewhere ok,suburbs
-        public string usage ;//condition of the estate:really old,old,medium,new
-
-
+      
         protected override decimal CalculateComission(Estate estate)
         {
             decimal poundage1 = 0m;

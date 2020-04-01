@@ -1,8 +1,9 @@
 ﻿using System;
-
-namespace Imobile
+using Imobile.Core.Estates;
+using Imobile.Core.Calculators.Comissioncalc;
+namespace Imobile.Core.Calculators.InitialPriceCalc
 {
-    abstract class InitialPrice : IInitialPrice
+    public abstract class InitialPrice : IInitialPrice
     {
 
         protected abstract decimal GetInitPrice(Estate estate);
