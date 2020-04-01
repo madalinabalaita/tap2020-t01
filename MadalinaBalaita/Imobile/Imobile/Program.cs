@@ -161,26 +161,6 @@ namespace Imobile
             if(estate.IPrice+estate.Comission==estate.Price){ Console.WriteLine("The calculus looks good! Everything is going as planned! Keep up the good work!"); }
             Console.WriteLine("{0}: {1}: {2}", estate.IPrice, estate.Comission, estate.Price);
         }
-        class AssetsCalculator : IInitialPrice
-        {
-            public decimal Get_price_fromLandlord(Estate estate)
-            {
-                return 130000;
-            }
-        }
-        class AssetsCom : IComissionCalculator
-        {
-            public decimal Get_poundage(Estate estate,decimal price)
-            {
-                return price*0.032m;
-            }
-            public decimal Get_price(Estate estate,decimal price)
-            {
-                price = new AssetsCalculator().Get_price_fromLandlord(estate);
-                return price += estate.Comission;
-                
-            }
-        }
 
     }
 }
