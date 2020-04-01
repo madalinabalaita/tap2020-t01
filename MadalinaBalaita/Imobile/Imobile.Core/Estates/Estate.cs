@@ -2,20 +2,20 @@
 namespace Imobile.Core.Estates
 {
     public abstract class Estate :EstateBase
-    {
+    {  
    
         public double  sm;//square meters of the estate
-        public string location;//the location of the estate:center,somewhere ok,suburbs
+        public string location { get; set; }//the location of the estate:center,somewhere ok,suburbs
         public string condition;//condition of the estate:really old,old,medium,new
         public string usage;//land for buildings(intravilan) or agriculture(extravilan)
-        public int cadastral_nr;//cadastral number
+        public int cadastral_nr { get; set; }//cadastral number
       
 
-        public string Get_location(string location)
-        {
+        public string Get_location()
+        {   
             return location;
         }
-        public int Get_location(int cadastral_nr)
+        public int Get_location_land()
         {
             return cadastral_nr;
         }
