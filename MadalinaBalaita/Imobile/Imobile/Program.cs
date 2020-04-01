@@ -13,7 +13,8 @@ namespace Imobile
         static void Main(string[] args)
         {
             string estate;
-            int sqm,cad_nr;
+            int cad_nr;
+            double sqm;
             string loc, cond;
             Console.WriteLine("Welcome to our Real Estate Agency!");
             Console.WriteLine("What are you looking for?(House/Flat/Studio/Land)");
@@ -26,7 +27,7 @@ namespace Imobile
                 var initialPrice = new HouseInitPrice();
                 var calculator = new HouseComissionCalculator();
                 Console.WriteLine("How many square meters?");
-                sqm = int.Parse(Console.ReadLine());
+                sqm = double.Parse(Console.ReadLine());
                 Console.WriteLine(" ");
                 Console.WriteLine("Choose a location (center/somewhere ok/suburbs)");
                 loc = Console.ReadLine();
@@ -36,9 +37,9 @@ namespace Imobile
                 Console.WriteLine(" ");
               
                     House house = new House(sqm, loc, cond);
-
-                    // Console.WriteLine("(Price withouth fee:" + house.Get_price_fromLandlord(initialPrice.Get_price_fromLandlord(house)) + " , the poundage:" + house.Get_poundage(calculator.Get_poundage(house, initialPrice.Get_price_fromLandlord(house))) + ")" + "The total price of this house is: " + house.Get_price(calculator.Get_price(house, initialPrice.Get_price_fromLandlord(house))));
-                    RealEstatePrices.GetInitialPriceFrom(house, initialPrice);
+                Console.WriteLine(house.sm);
+                // Console.WriteLine("(Price withouth fee:" + house.Get_price_fromLandlord(initialPrice.Get_price_fromLandlord(house)) + " , the poundage:" + house.Get_poundage(calculator.Get_poundage(house, initialPrice.Get_price_fromLandlord(house))) + ")" + "The total price of this house is: " + house.Get_price(calculator.Get_price(house, initialPrice.Get_price_fromLandlord(house))));
+                RealEstatePrices.GetInitialPriceFrom(house, initialPrice);
                     RealEstatePrices.GetComissionFrom(house, calculator, initialPrice);
                     RealEstatePrices.GetPriceFrom(house, calculator, initialPrice);
                     TestGoodPrice(house);
@@ -50,7 +51,7 @@ namespace Imobile
                 var initialPrice = new FlatInitPrice();
                 var calculator = new FlatComissionCalculator();
                 Console.WriteLine("How many square meters?");
-                  sqm = int.Parse(Console.ReadLine());
+                  sqm = double.Parse(Console.ReadLine());
                   Console.WriteLine(" ");
                   Console.WriteLine("Choose a location (center/somewhere ok/suburbs)");
                   loc = Console.ReadLine();
@@ -73,7 +74,7 @@ namespace Imobile
                 var initialPrice = new StudioInitPrice();
                 var calculator = new StudioComissionCalculator();
                 Console.WriteLine("How many square meters?");
-                  sqm = int.Parse(Console.ReadLine());
+                  sqm = double.Parse(Console.ReadLine());
                   Console.WriteLine(" ");
                   Console.WriteLine("Choose a location (center/somewhere ok/suburbs)");
                   loc = Console.ReadLine();
@@ -95,7 +96,7 @@ namespace Imobile
                 var calculator = new LandComissionCalculator();
 
                 Console.WriteLine("How many square meters?");
-                sqm = int.Parse(Console.ReadLine());
+                sqm = double.Parse(Console.ReadLine());
                 Console.WriteLine(" ");
                 Console.WriteLine("Choose a location (543345/23214/61321)");
                 cad_nr = int.Parse(Console.ReadLine());

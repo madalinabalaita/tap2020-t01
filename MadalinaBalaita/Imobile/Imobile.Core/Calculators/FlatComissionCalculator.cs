@@ -3,10 +3,7 @@ namespace Imobile.Core.Calculators
 {
     public class FlatComissionCalculator : ComissionCalculator
     {
-        public int sm;//square meters of the estate
-        public string location;//the location of the estate:center,somewhere ok,suburbs
-        public string condition;//condition of the estate:really old,old,medium,new
-
+       
 
         protected override decimal CalculateComission(Estate estate)
         {
