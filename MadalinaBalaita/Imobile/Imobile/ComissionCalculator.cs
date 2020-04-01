@@ -2,11 +2,11 @@
 
 namespace Imobile
 {
-    abstract class ComissionCalculator
+    abstract class ComissionCalculator : IComissionCalculator
     {
-       
+
         protected abstract decimal CalculateComission(Estate estate);
-        public decimal Get_poundage(Estate estate,decimal price)
+        public decimal Get_poundage(Estate estate, decimal price)
         {
             var comission = CalculateComission(estate);
             return price * comission;
