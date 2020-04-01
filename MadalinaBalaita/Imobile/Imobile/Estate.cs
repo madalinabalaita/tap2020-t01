@@ -4,10 +4,23 @@
     {
         //a basic price, a starting point for the price which will increase or decrease based on the square meters,location and condition of the estate
         //the price the client is willing to pay
-        protected decimal price;
-        
-     
-        
+        public decimal Price;
+        public decimal comission;
+        public decimal Get_poundage( decimal comission) {
+            
+            return comission;
+        }
+        public decimal Get_price(decimal price)
+        {
+            Price = price;
+            return price ;
+        }
+        public decimal Get_price_fromLandlord(decimal price)
+        {
+            return price;
+        }
+
+
         public int sm { get; set; }//square meters of the estate
         public string location;//the location of the estate:center,somewhere ok,suburbs
         public string condition;//condition of the estate:really old,old,medium,new
