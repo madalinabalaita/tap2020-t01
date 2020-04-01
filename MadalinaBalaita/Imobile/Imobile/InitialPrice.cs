@@ -2,9 +2,9 @@
 
 namespace Imobile
 {
-    abstract class InitialPrice
-    { 
-        
+    abstract class InitialPrice : IInitialPrice
+    {
+
         protected abstract decimal GetInitPrice(Estate estate);
         public decimal Get_price_fromLandlord(Estate estate)
         {
@@ -12,8 +12,8 @@ namespace Imobile
             return price;
         }
 
-     
-      
+
+
 
     }
 }
