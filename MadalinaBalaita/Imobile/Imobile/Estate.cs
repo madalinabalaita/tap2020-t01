@@ -3,7 +3,6 @@
     abstract class Estate :EstateBase
     {
    
-
         public int sm { get; set; }//square meters of the estate
         public string location;//the location of the estate:center,somewhere ok,suburbs
         public string condition;//condition of the estate:really old,old,medium,new

@@ -2,8 +2,7 @@
 {
     class LandInitPrice : InitialPrice
     {
-        public int sm;
-        public string usage;
+        
         protected override decimal GetInitPrice(Estate estate)
         {
             decimal price = 0;

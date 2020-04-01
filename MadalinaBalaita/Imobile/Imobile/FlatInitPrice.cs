@@ -2,7 +2,7 @@
 {
     class FlatInitPrice : InitialPrice
     {
-        public int sm;
+        
         protected override decimal GetInitPrice(Estate estate)
         {
             decimal price = 0;
