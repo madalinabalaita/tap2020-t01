@@ -2,7 +2,7 @@
 namespace Imobile.Core.Estates
 {
     public abstract class Estate :EstateBase
-    {
+    {  
    
         public double  sm;//square meters of the estate
         public string location;//the location of the estate:center,somewhere ok,suburbs
@@ -12,7 +12,7 @@ namespace Imobile.Core.Estates
       
 
         public string Get_location(string location)
-        {
+        {   
             return location;
         }
         public int Get_location(int cadastral_nr)

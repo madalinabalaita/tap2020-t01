@@ -126,6 +126,11 @@ namespace Imobile
             if(estate.IPrice+estate.Comission==estate.Price){ Console.WriteLine("The calculus looks good! Everything is going as planned! Keep up the good work!"); }
             Console.WriteLine("{0}: {1}: {2}", estate.IPrice, estate.Comission, estate.Price);
         }
-
+        /*static void Locations(Estate estate)
+        {
+            if(estate.location=="Center")
+                Console.WriteLine("We have the next locations in the center of the city:"+ estate.IPrice, estate.Comission, estate.Price);
+        }
+        */
     }
 }
