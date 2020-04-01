@@ -1,7 +1,7 @@
 ﻿ using Imobile.Core.Calculators;
 namespace Imobile.Core.Estates
 {
-    public abstract class Estate :EstateBase
+    public abstract class Estate :Assets
     {  
    
         public double  sm;//square meters of the estate
