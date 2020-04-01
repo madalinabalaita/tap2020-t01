@@ -109,7 +109,6 @@ namespace Imobile
                   Console.WriteLine(" ");
                   try
                   {
-
                       Studio studio = new Studio( sqm, loc, cond);
                     GetInitialPriceFrom(studio, initialPrice);
                     GetComissionFrom(studio, calculator, initialPrice);
@@ -142,7 +141,7 @@ namespace Imobile
                 cond = Console.ReadLine();
                 Console.WriteLine(" ");
                 
-                    UrbanLand land = new UrbanLand(sqm, cad_nr, cond);
+                UrbanLand land = new UrbanLand(sqm, cad_nr, cond);
                 GetInitialPriceFrom(land, initialPrice);
                 GetComissionFrom(land, calculator, initialPrice);
                 GetPriceFrom(land, calculator, initialPrice);
