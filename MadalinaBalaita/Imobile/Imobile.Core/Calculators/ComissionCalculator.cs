@@ -1,8 +1,8 @@
 ﻿using System;
-
-namespace Imobile
+using Imobile.Core.Estates;
+namespace Imobile.Core.Calculators
 {
-    abstract class ComissionCalculator : IComissionCalculator
+    public abstract class ComissionCalculator : IComissionCalculator
     {
 
         protected abstract decimal CalculateComission(Estate estate);

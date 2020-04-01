@@ -1,6 +1,7 @@
-﻿namespace Imobile
+﻿using Imobile.Core.Estates;
+namespace Imobile.Core.Calculators
 {
-    class LandInitPrice : InitialPrice
+    public class LandInitPrice : InitialPrice
     {
         
         protected override decimal GetInitPrice(Estate estate)

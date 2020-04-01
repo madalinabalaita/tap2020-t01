@@ -1,9 +1,10 @@
-﻿namespace Imobile
+﻿
+using Imobile.Core.Estates;
+namespace Imobile.Core.Calculators
 {
 
-    partial class Program
-    {
-        class AssetsCalculator : IInitialPrice
+   
+        public class AssetsCalculator : IInitialPrice
         {
             public decimal Get_price_fromLandlord(Estate estate)
             {
@@ -11,5 +12,4 @@
             }
         }
 
-    }
 }

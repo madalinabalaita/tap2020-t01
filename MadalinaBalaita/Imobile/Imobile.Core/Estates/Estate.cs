@@ -1,6 +1,7 @@
-﻿namespace Imobile
+﻿ using Imobile.Core.Calculators;
+namespace Imobile.Core.Estates
 {
-    abstract class Estate :EstateBase
+    public abstract class Estate :EstateBase
     {
    
         public int sm { get; set; }//square meters of the estate

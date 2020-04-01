@@ -1,6 +1,7 @@
-﻿namespace Imobile
+﻿using Imobile.Core.Estates;
+namespace Imobile.Core.Calculators
 {
-    abstract class PriceCalculator
+    public abstract class PriceCalculator
     {
         /*public decimal Get_price(Estate estate)
         {

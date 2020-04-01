@@ -1,6 +1,7 @@
-﻿namespace Imobile
+﻿using Imobile.Core.Estates;
+namespace Imobile.Core.Calculators
 {
-    class LandComissionCalculator : ComissionCalculator
+    public class LandComissionCalculator : ComissionCalculator
     {
         public int sm;//square meters of the estate
         public int cadastral_nr;//the location of the estate:center,somewhere ok,suburbs

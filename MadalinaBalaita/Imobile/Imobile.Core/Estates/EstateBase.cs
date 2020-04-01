@@ -1,6 +1,7 @@
-﻿namespace Imobile
+﻿using Imobile.Core.Calculators;
+namespace Imobile.Core.Estates
 {
-    abstract class EstateBase
+    public abstract class EstateBase
     {
         public decimal Price { get; protected set; }
         public decimal Comission { get; set; }
