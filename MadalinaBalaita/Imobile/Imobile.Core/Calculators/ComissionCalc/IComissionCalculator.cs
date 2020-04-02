@@ -6,5 +6,7 @@ namespace Imobile.Core.Calculators.Comissioncalc
     {
         decimal Get_poundage(Estate estate, decimal price);
         decimal Get_price(Estate estate, decimal price);
+        decimal Get_poundage(Assets assets, decimal price);
+        decimal Get_price(Assets assets, decimal price);
     }
 }

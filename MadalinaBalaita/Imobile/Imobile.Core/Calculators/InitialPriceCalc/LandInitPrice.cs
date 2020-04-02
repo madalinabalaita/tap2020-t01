@@ -1,28 +1,32 @@
 ﻿using Imobile.Core.Estates;
 using Imobile.Core.Calculators.Comissioncalc;
+using System;
 namespace Imobile.Core.Calculators.InitialPriceCalc
 {
     public class LandInitPrice : InitialPrice
     {
         
-        protected override decimal GetInitPrice(Estate estate)
+       public override decimal GetInitPrice(Assets asset)
         {
             decimal price = 0;
-            if (estate.usage == "intravilan")
+            if (asset.usage == "intravilan")
             {
-                if (estate.sm < 500) price = 8000;
-                else if (estate.sm >= 500 && estate.sm <= 1500) price = 14000;
-                else if (estate.sm > 1500) price = 20000;
+                if (asset.sm < 500) price = 8000;
+                else if (asset.sm >= 500 && asset.sm <= 1500) price = 14000;
+                else if (asset.sm > 1500) price = 20000;
             }
-            else if (estate.usage == "extravilan")
+            else if (asset.usage == "extravilan")
             {
-                if (estate.sm < 500) price = 5000;
-                else if (estate.sm >= 500 && estate.sm <= 1500) price = 10000;
-                else if (estate.sm > 1500) price = 15000;
+                if (asset.sm < 500) price = 5000;
+                else if (asset.sm >= 500 && asset.sm <= 1500) price = 10000;
+                else if (asset.sm > 1500) price = 15000;
             }
             return price;
         }
-
+        public override decimal GetInitPrice(Estate estate)
+        {
+            throw new NotImplementedException();
+        }
 
     }
 }

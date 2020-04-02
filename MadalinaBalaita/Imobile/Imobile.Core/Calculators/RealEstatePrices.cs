@@ -54,7 +54,36 @@ namespace Imobile.Core.Calculators
 
 
         }
-        public static void GetLocationLandFrom(int cadastral_nr, Estate estate)
+        public static void GetInitialPriceFrom(Assets asset, IInitialPrice initPrice)
+        {
+            var iPrice = initPrice.Get_price_fromLandlord(asset);
+
+            // Console.WriteLine("{0}: {1}",estate.GetType().Name,estate.IPrice);
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            System.Console.Out.WriteLine("The initial price is " + asset.Get_price_fromLandlord(iPrice) + "€");
+
+
+        }
+
+        public static void GetComissionFrom(Assets asset, IComissionCalculator comission, IInitialPrice initPrice)
+        {
+            var iPrice = initPrice.Get_price_fromLandlord(asset);
+            var com = comission.Get_poundage(asset, asset.Get_price_fromLandlord(iPrice));
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            System.Console.Out.WriteLine("The poundage is " + asset.Get_poundage(com) + "€");
+        }
+
+        public static void GetPriceFrom(Assets asset, IComissionCalculator calculator, IInitialPrice initPrice)
+        {
+
+            var iPrice = initPrice.Get_price_fromLandlord(asset);
+            var price = calculator.Get_price(asset, iPrice);
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            System.Console.Out.WriteLine("The total price is " + asset.Get_price(price) + "€");
+
+        }
+    
+        public static void GetLocationLandFrom(int cadastral_nr, Assets asset)
         {
           
             if (cadastral_nr == 543345)

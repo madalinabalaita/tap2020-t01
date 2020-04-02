@@ -1,12 +1,13 @@
 ﻿using Imobile.Core.Estates;
 using Imobile.Core.Calculators.Comissioncalc;
+using System;
 
 namespace Imobile.Core.Calculators.InitialPriceCalc
 {
     public class HouseInitPrice : InitialPrice
     {
         public double sm;
-        protected override decimal GetInitPrice(Estate estate)
+        public override decimal GetInitPrice(Estate estate)
         {
             decimal price=0;
             if (estate.sm < 70) price=80000;
@@ -16,6 +17,9 @@ namespace Imobile.Core.Calculators.InitialPriceCalc
             
         }
 
-
+        public override decimal GetInitPrice(Assets asset)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

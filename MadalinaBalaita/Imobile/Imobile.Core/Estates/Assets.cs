@@ -30,6 +30,25 @@ namespace Imobile.Core.Estates
         {
             return cadastral_nr;
         }
+        //constructor for land
+        public Assets(double sm, int cadastral_nr, string usage)
+        {
+
+            this.sm = sm;
+            this.cadastral_nr = cadastral_nr;
+            this.usage = usage;
+
+        }
+        //constructor for buildings: Flats,studios,houses
+        public Assets(double sm,string location, string condition)
+        {
+
+            this.sm = sm;
+            this.location  = location;
+            this.condition = condition;
+
+        }
+
 
     }
 }

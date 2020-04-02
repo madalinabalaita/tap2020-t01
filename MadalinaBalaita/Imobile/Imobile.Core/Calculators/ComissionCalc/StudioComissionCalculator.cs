@@ -1,16 +1,17 @@
 ﻿using Imobile.Core.Estates;
 using Imobile.Core.Calculators.InitialPriceCalc;
+using System;
 namespace Imobile.Core.Calculators.Comissioncalc
 {
     public class StudioComissionCalculator : ComissionCalculator
     {
 
-        protected override decimal CalculateComission(Estate estate)
+       public override decimal CalculateComission(Estate estate)
         {
 
             decimal poundage1 = 0m;
             decimal poundage2 = 0m;
-            decimal poundage3=0m;
+            decimal poundage3 = 0m;
             decimal poundage;
 
             if (estate.sm >= 15 && estate.sm <= 30) poundage1 = 0.005m;
@@ -34,6 +35,9 @@ namespace Imobile.Core.Calculators.Comissioncalc
             return poundage;
         }
 
-
+        public override decimal CalculateComission(Assets asset)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
